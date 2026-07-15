@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의 여행지</title>
+</head>
+<body>
+  <main>
+    <h1>🌍 나의 여행 앨범 💿</h1>
+    <audio controls autoplay loop>
+      <source src="media/natural.mp3" type="audio/mpeg">
+      your browser does not support the audio element.
+    </audio>
+    <hr>
+
+    <section>
+      <picture>
+        <source media="(min-width: 600px)" srcset="media/animal.jpg">
+        <img src="media/animal.jpg" alt="호랑이 사진" width="320" height="240 ">
+      </picture>
+      <p>호랑이 (2025년)</p>
+      <br>
+    </section>
+
+    <section>
+      <picture>
+        <source media="(min-width: 600px)" srcset="media/mount.jpg">
+        <img src="media/mount.jpg" alt="산 사진" width="320" height="240">
+      </picture>
+      <p>산 (2024년)</p>
+      <br>
+    </section>
+    <section>
+      <picture>
+        <source media="(min-width: 600px)" srcset="media/space.jpg">
+        <img src="media/space.jpg" alt="우주 사진" width="320" height="240">
+      </picture>
+      <p>우주 (2023년)</p>
+      <br>
+    </section>
+    <hr>
+    <section>
+      <h2>🎥 나의 여행 브이로그</h2>
+      <video width="320" height="240" controls autoplay muted poster="media/animal.jpg">
+        <source src="media/travel.mp4" type="video/mp4">
+        your browser does not support the video tag.
+      </video>
+      <p>아름다운 영상 🏞️</p>
+    </section>
+  </main>
+</body>
+</html>
