@@ -8,6 +8,8 @@
 <body>
   <main>
     <h1>🌍 나의 여행 앨범 💿</h1>
+    <!--autoplay: 자동 재생-->  
+    <!--loop: 반복 재생-->
     <audio controls autoplay loop>
       <source src="media/natural.mp3" type="audio/mpeg">
       your browser does not support the audio element.
@@ -17,8 +19,10 @@
     <section>
       <picture>
         <source media="(min-width: 600px)" srcset="media/animal.jpg">
-        <img src="media/animal.jpg" alt="호랑이 사진" width="320" height="240 ">
+        <img src="media/animal-small.jpg" alt="호랑이 사진" width="320" height="240 ">
       </picture>
+      <!--화면 너비가 600px 이상일 때 srcset 사용-->
+      <!--조건에 맞지 않으면 img 태그의 src 속성 사용-->
       <p>호랑이 (2025년)</p>
       <br>
     </section>
@@ -26,7 +30,7 @@
     <section>
       <picture>
         <source media="(min-width: 600px)" srcset="media/mount.jpg">
-        <img src="media/mount.jpg" alt="산 사진" width="320" height="240">
+        <img src="media/mount-small.jpg" alt="산 사진" width="320" height="240">
       </picture>
       <p>산 (2024년)</p>
       <br>
@@ -34,7 +38,7 @@
     <section>
       <picture>
         <source media="(min-width: 600px)" srcset="media/space.jpg">
-        <img src="media/space.jpg" alt="우주 사진" width="320" height="240">
+        <img src="media/space-small.jpg" alt="우주 사진" width="320" height="240">
       </picture>
       <p>우주 (2023년)</p>
       <br>
@@ -42,6 +46,8 @@
     <hr>
     <section>
       <h2>🎥 나의 여행 브이로그</h2>
+      <!--muted:음소거-->
+      <!--poster:비디오 재생 전 이미지-->
       <video width="320" height="240" controls autoplay muted poster="media/animal.jpg">
         <source src="media/travel.mp4" type="video/mp4">
         your browser does not support the video tag.
