@@ -46,15 +46,17 @@
           <p class="trip-card">우주 (2023년)</p>
         </section>
       </div>
-      <section>
+      <section class="vlog-section">
         <h2>🎥 나의 여행 브이로그</h2>
         <!--muted:음소거-->
         <!--poster:비디오 재생 전 이미지-->
-        <video width="320" height="240" controls autoplay muted poster="media/animal.jpg">
-          <source src="media/travel.mp4" type="video/mp4">
-          your browser does not support the video tag.
-        </video>
-        <p>아름다운 영상 🏞️</p>
+        <div class="video-wrapper">
+          <video class="vlog-video" controls autoplay muted poster="media/mount.jpg">
+            <source src="media/mountain.mp4" type="video/mp4">
+            your browser does not support the video tag.
+          </video>
+        </div>
+        <p class="vlog-caption">설산의 아름다운 풍경을 감상해 보세요! 🏞️</p>
       </section>
     </main>
   </div>

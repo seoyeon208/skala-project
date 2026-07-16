@@ -6,10 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!citySelect || !weatherBox) return;
 
+  // localStorage에서 마지막으로 선택한 도시를 불러와 select에 반영
+  const savedCity = localStorage.getItem("lastCity");
+  if (savedCity) {
+    citySelect.value = savedCity;
+  }
+
   citySelect.addEventListener("change", async () => {
     const selectedOption = citySelect.options[citySelect.selectedIndex];
     const cityValue = selectedOption.value;
     const cityText = selectedOption.text;
+
+    // 선택한 도시를 localStorage에 저장
+    localStorage.setItem("lastCity", cityValue);
 
     weatherBox.innerHTML =
       `<p class='weather-city'>${cityText}</p>` +
