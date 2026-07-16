@@ -1,72 +1,103 @@
-
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome SKALA</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <div class="container">
-  <header>
-    <h1>허서연의 유니버스 🚀</h1>
-    <p>저의 프로필, 학습 내용, 여행 기록을 모아둔 Hub 페이지입니다.</p>
-  </header>
+    <header>
+      <h1>허서연의 유니버스 🚀</h1>
+      <p>저의 프로필, 학습 내용, 여행 기록을 모아둔 Hub 페이지입니다.</p>
+    </header>
 
-  <nav>
-    <h2>📁 바로가기 메뉴</h2>
-    <ul>
-      <li><a href="myProfile.html">소개 (Profile)</a></li>
-      <li><a href="myClass.html">수업 시간표 (Class)</a></li>
-      <li><a href="holiday.html">휴일 계획 (Holiday)</a></li>
-      <li><a href="myTrip.html">여행 앨범 (Album)</a></li>
-      <li><a href="signUp.html">👤 회원가입 (Sign Up)</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <h2>📁 바로가기 메뉴</h2>
+      <ul>
+        <li><a href="myProfile.html">소개 (Profile)</a></li>
+        <li><a href="myClass.html">수업 시간표 (Class)</a></li>
+        <li><a href="holiday.html">휴일 계획 (Holiday)</a></li>
+        <li><a href="myTrip.html">여행 앨범 (Album)</a></li>
+        <li><a href="signUp.html">👤 회원가입 (Sign Up)</a></li>
+      </ul>
+    </nav>
 
-  <div class="content-layout">
-    <main>
-      <h2>📌 오늘의 주요 소식</h2>
+    <div class="content-layout">
+      <main>
+        <h3>📌 오늘의 주요 소식</h3>
 
-      <section>
-        <h3>최근 공지 및 업데이트</h3>
-        <h4>[업데이트] 여행 앨범에 동영상 추가 완료!</h4>
-        <p>
-          호주에도 대설산 눈밭 아래에 멋진 브이로그 영상을 추가했습니다. 아래 소식과 영상으로 여행을 추억할 수 있습니다.
-        </p>
-        <p>작성일: <time datetime="2026-06-11">2026년 6월 11일</time></p>
-      </section>
+        <section>
+          <h4>최근 공지 및 업데이트</h4>
+          <h5>[업데이트] 여행 앨범에 동영상 추가 완료!</h5>
+          <p>
+            호주에도 대설산 눈밭 아래에 멋진 브이로그 영상을 추가했습니다. 아래 소식과 영상으로 여행을 추억할 수 있습니다.
+          </p>
+          <p><small>작성일: <time datetime="2026-06-11">2026년 6월 11일</time></small></p>
+        </section>
 
-      <section>
-        <dl>
-          <dt><strong>📷 이달의 베스트 컷</strong></dt>
-          <dd>
+        <section class="best-cut-section">
+          <h3>📷 이달의 베스트 컷</h3>
+          <figure class="best-cut-card">
             <a href="myTrip.html">
-              <img src="media/mount.jpg" alt="노을진 저녁의 산 풍경" width="320" height="240">
+              <img src="media/mount.jpg" alt="노을진 저녁의 산 풍경">
             </a>
-          </dd>
-          <dd>산과 밤하늘 (2025년 촬영)</dd>
-        </dl>
-      </section>
-    </main>
+            <figcaption>산과 밤하늘 (2025년 촬영)</figcaption>
+          </figure>
+        </section>
+      </main>
 
-    <aside>
-      <h3>🔔 실시간 정보</h3>
-      <p>현재 위치: 광주광역시 광산구 📍</p>
-      <p>
-        추천 학습 사이트:
-        <a href="https://www.w3schools.com/" target="_blank">W3Schools 온라인 명세서</a>
-        <!--새 탭에서 열기-. "_self"로 바꾸면 현재 탭에서 열기-->
-      </p>
-    </aside> 
+      <aside>
+        <h3>🔔 실시간 정보</h3>
+        <p>현재 위치: 광주광역시 광산구 📍</p>
+        <p>
+          추천 학습 사이트:
+          <a href="https://www.w3schools.com/" target="_blank">W3Schools 온라인 명세서</a>
+          <!--새 탭에서 열기-. "_self"로 바꾸면 현재 탭에서 열기-->
+        </p>
+
+        <section class="tool-section">
+          <h3>🌤 실시간 날씨</h3>
+          <p class="tool-text">날씨를 확인할 도시를 선택하세요.</p>
+          <select id="city-select">
+            <option value="Seoul" selected>서울</option>
+            <option value="Busan">부산</option>
+            <option value="Gwangju">광주</option>
+            <option value="Daejeon">대전</option>
+          </select>
+          <div id="weather-box">
+            <p>도시를 선택해주세요.</p>
+          </div>
+        </section>
+
+        <section class="tool-section">
+          <h3>🎮 미니 게임 & 도구</h3>
+          <p class="tool-text">비밀 숫자를 맞춰보세요!</p>
+          <button class="btn-submit tool-btn" onclick="playUpDownGame()">숫자 게임</button>
+
+          <p class="tool-text">평균 성적을 계산해보세요!</p>
+          <button class="btn-reset tool-btn" onclick="calculateGrades()">성적 계산기</button>
+
+          <p class="tool-text">What's in my bag?</p>
+          <button class="btn-reset bg-white tool-btn" onclick="showMyBag()">구경하기</button>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <!--mailto: 클릭 시 해당 이메일 주소로 바로 메일 전송 가능 -->
+      <p>이메일 문의: <a href="mailto:student@skala.com">student@skala.com</a></p>
+      <p><small>&copy; 2026 허서연의 포트폴리오. 모든 콘텐츠는 웹 표준 시맨틱 태그로 작성되었습니다.</small></p>
+    </footer>
   </div>
 
-  <footer>
-    <!--mailto: 클릭 시 해당 이메일 주소로 바로 메일 전송 가능 -->
-    <p><a href="mailto:student@skala.com">이메일 문의: student@skala.com</a></p>
-    <p><small>&copy; 2026 개인 포트폴리오. 모든 콘텐츠는 웹 표준 시맨틱 태그로 작성되었습니다.</small></p>
-  </footer>
-  </div>
+  <script src="script/upDown.js"></script>
+  <script src="script/grade.js"></script>
+  <script src="script/bag.js"></script>
+  <script type="module" src="script/realtimeInfo.js"></script>
 </body>
+
 </html>

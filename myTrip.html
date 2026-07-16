@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>나의 여행지</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <div class="container">
-  <main>
-    <h1>🌍 나의 여행 앨범 💿</h1>
-    <!--autoplay: 자동 재생-->  
-    <!--loop: 반복 재생-->
-    <audio controls autoplay loop>
-      <source src="media/natural.mp3" type="audio/mpeg">
-      your browser does not support the audio element.
-    </audio>
-    <hr>
+    <main>
+      <h1>🌍 나의 여행 앨범 💿</h1>
+      <!--autoplay: 자동 재생-->
+      <!--loop: 반복 재생-->
+      <audio controls autoplay loop>
+        <source src="media/natural.mp3" type="audio/mpeg">
+        your browser does not support the audio element.
+      </audio>
+      <hr>
 
-    <section>
-      <picture>
-        <source media="(min-width: 600px)" srcset="media/animal.jpg">
-        <img src="media/animal-small.jpg" alt="호랑이 사진" width="320" height="240 ">
-      </picture>
-      <!--화면 너비가 600px 이상일 때 srcset 사용-->
-      <!--조건에 맞지 않으면 img 태그의 src 속성 사용-->
-      <p class="trip-card">호랑이 (2025년)</p>
-      <br>
-    </section>
+      <div class="trip-grid">
+        <section>
+          <picture>
+            <source media="(min-width: 600px)" srcset="media/animal.jpg">
+            <img src="media/animal-small.jpg" alt="호랑이 사진">
+          </picture>
+          <!--화면 너비가 600px 이상일 때 srcset 사용-->
+          <!--조건에 맞지 않으면 img 태그의 src 속성 사용-->
+          <p class="trip-card">호랑이 (2025년)</p>
+        </section>
 
-    <section>
-      <picture>
-        <source media="(min-width: 600px)" srcset="media/mount.jpg">
-        <img src="media/mount-small.jpg" alt="산 사진" width="320" height="240">
-      </picture>
-      <p class="trip-card">산 (2024년)</p>
-      <br>
-    </section>
-    <section>
-      <picture>
-        <source media="(min-width: 600px)" srcset="media/space.jpg">
-        <img src="media/space-small.jpg" alt="우주 사진" width="320" height="240">
-      </picture>
-      <p class="trip-card">우주 (2023년)</p>
-      <br>
-    </section>
-    <section>
-      <h2>🎥 나의 여행 브이로그</h2>
-      <!--muted:음소거-->
-      <!--poster:비디오 재생 전 이미지-->
-      <video width="320" height="240" controls autoplay muted poster="media/animal.jpg">
-        <source src="media/travel.mp4" type="video/mp4">
-        your browser does not support the video tag.
-      </video>
-      <p>아름다운 영상 🏞️</p>
-    </section>
-  </main>
+        <section>
+          <picture>
+            <source media="(min-width: 600px)" srcset="media/mount.jpg">
+            <img src="media/mount-small.jpg" alt="산 사진">
+          </picture>
+          <p class="trip-card">산 (2024년)</p>
+        </section>
+        <section>
+          <picture>
+            <source media="(min-width: 600px)" srcset="media/space.jpg">
+            <img src="media/space-small.jpg" alt="우주 사진">
+          </picture>
+          <p class="trip-card">우주 (2023년)</p>
+        </section>
+      </div>
+      <section>
+        <h2>🎥 나의 여행 브이로그</h2>
+        <!--muted:음소거-->
+        <!--poster:비디오 재생 전 이미지-->
+        <video width="320" height="240" controls autoplay muted poster="media/animal.jpg">
+          <source src="media/travel.mp4" type="video/mp4">
+          your browser does not support the video tag.
+        </video>
+        <p>아름다운 영상 🏞️</p>
+      </section>
+    </main>
   </div>
 </body>
+
 </html>
