@@ -1,0 +1,18 @@
+# Stack Overflow 2024 분석 파이프라인 의존성
+# 설치: pip install -r requirements.txt
+# (버전은 개발 환경 .venv 기준으로 고정)
+
+# 데이터 로딩 / 처리
+pandas==2.3.3
+polars==1.36.1
+numpy==2.0.2
+
+# 통계 / 머신러닝
+scipy==1.13.1
+scikit-learn==1.6.1
+joblib==1.5.3
+
+# 시각화
+matplotlib==3.9.4
+seaborn==0.13.2
+plotly==6.9.0

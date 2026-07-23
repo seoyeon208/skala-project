@@ -1,0 +1,5 @@
+[api]
+weather_url = "https://api.open-meteo.com/v1/forecast?latitude=37.5665&longitude=126.9780&hourly=temperature_2m,precipitation_probability&forecast_days=3&timezone=Asia/Seoul"
+country_url = "https://countries.dev/alpha/KOR"
+ip_url = "http://ip-api.com/json/8.8.8.8"
+timeout = 10.0
